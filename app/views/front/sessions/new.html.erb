@@ -1,0 +1,27 @@
+<% provide(:title, "ログイン") %>
+<div class="signin-box">
+  <div class="logo bg-gradient">
+    marble
+  </div>
+  <h2 class="slogan signin-slogan">
+    わたしの輝き方を、組織の仲間と再発見する
+  </h2>
+
+  <% flash.each do |message_type, message| %>
+    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  <% end %>
+
+  <%= form_with url: login_path do |f| %>
+    <%= f.label :email, class: "label" %>
+    <%= f.email_field :email, class: "form-control", placeholder: "メールアドレス" %>
+
+    <%= f.password_field :password, class: "form-control", placeholder: "パスワード" %>
+
+    <%= f.label :remember, class: "label" do %>
+      <%= f.check_box :remember %>
+      Remember me
+    <% end %>
+
+    <%= f.submit "ログインする", class: "btn btn-primary btn-signin bg-primary" %>
+  <% end %>
+</div>

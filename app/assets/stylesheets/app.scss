@@ -1,1 +1,98 @@
 @import "alert";
+
+/************/
+/* 共通部品 */
+/************/
+// 色の定義
+$primary-color: #00ccff;
+$secondary-color: #ff5555;
+
+// 背景色
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+.bg-gradient {
+  background: linear-gradient(to right, $primary-color, pink);
+}
+
+// 共通部品
+html, body {
+    width: 768px;
+    height: 100%;
+    font-size: 1rem;
+    background: #ffffff;
+    margin: auto;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid black;
+  display: block;
+  width: 100%;
+  margin: 0 auto 40px;
+  padding-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  height: 60px;
+  display: inline-block;
+}
+
+.btn-primary {
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.btn-signup, .btn-signin {
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+
+// TODO: marbleの正式なロゴに変更
+.logo {
+  width: 300px;
+  height: 80px;
+  margin: 0 auto;
+  line-height: 80px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
+
+// デバッグ部品
+.debug_dump {
+  background-color: cyan;
+}
+
+// サインアップ、サインイン画面
+.signin-box, .signup-box {
+  width: 80%;
+  margin: 90px auto 0;
+
+  .slogan {
+    text-align: center;
+    color: #999999;
+    font-size: 1.2rem;
+  }
+
+  .signup-slogan {
+    margin-bottom: 80px;
+  }
+
+  .signin-slogan {
+    margin-bottom: 120px;
+  }
+
+  .label {
+    color: #999999;
+    font-size: 0.9rem;
+  }
+}
