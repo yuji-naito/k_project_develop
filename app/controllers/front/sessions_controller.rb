@@ -13,7 +13,7 @@ class Front::SessionsController < ApplicationController
       # 初回ログインかどうかでリダイレクトを切り替え
       if @user.first_flag
         @user.update(first_flag: false)
-        redirect_to edit_user_path @user
+        redirect_to edit_users_path
       else
         redirect_back_or root_path
       end
