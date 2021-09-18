@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     # ホーム
     root 'home#show'
 
-    resources :users, only: [:edit]
+    resource :users, only: [:edit]
   end
 end
