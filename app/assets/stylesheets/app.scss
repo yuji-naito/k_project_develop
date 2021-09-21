@@ -33,6 +33,21 @@ html, body {
     margin: auto;
 }
 
+.header {
+  height: 50px;
+  line-height: 50px;
+  padding: auto 20px;
+}
+
+.header-before-signin {
+  text-align: right;
+  text-decoration: none;
+}
+
+.header-text {
+  text-decoration: none;
+}
+
 .form-control {
   border: none;
   border-bottom: 1px solid black;
@@ -79,7 +94,7 @@ html, body {
 // サインアップ、サインイン画面
 .signin-box, .signup-box {
   width: 80%;
-  margin: 90px auto 0;
+  margin: 50px auto 0;
 
   .slogan {
     text-align: center;
