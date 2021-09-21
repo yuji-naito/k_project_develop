@@ -1,0 +1,9 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: 氏名
+       email: メールアドレス
+       phone_number: 電話番号
+       description: 自己紹介
+       first_flag: 初回ログインフラグ
