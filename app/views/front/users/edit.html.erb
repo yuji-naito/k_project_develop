@@ -1,6 +1,6 @@
 <% provide(:title, "プロフィール設定") %>
 
-<%= link_to '戻る', signout_path, method: :delete %>
+<%= render 'layouts/header_back', back_path: signout_path, method: :delete %>
 
 <div class="profile-box">
   <h2 class="profile-title">
