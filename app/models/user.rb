@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_one_attached :avatar
+  has_many :team_members
+  has_many :teams, through: :team_members
 
   attr_accessor :remember_token
   before_save :downcase_email

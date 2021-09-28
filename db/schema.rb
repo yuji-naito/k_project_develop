@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_28_095009) do
+ActiveRecord::Schema.define(version: 2021_09_28_223800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,22 +43,20 @@ ActiveRecord::Schema.define(version: 2021_09_28_095009) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "own_colors", force: :cascade do |t|
+  create_table "team_members", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "color1", null: false
-    t.integer "color2", null: false
-    t.integer "color3", null: false
-    t.integer "color4", null: false
-    t.integer "color5", null: false
-    t.integer "color6", null: false
-    t.integer "color7", null: false
-    t.integer "color8", null: false
-    t.integer "color9", null: false
-    t.integer "color10", null: false
-    t.integer "color11", null: false
+    t.bigint "team_id", null: false
+    t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_own_colors_on_user_id"
+    t.index ["team_id"], name: "index_team_members_on_team_id"
+    t.index ["user_id"], name: "index_team_members_on_user_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,5 +74,6 @@ ActiveRecord::Schema.define(version: 2021_09_28_095009) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "own_colors", "users"
+  add_foreign_key "team_members", "teams"
+  add_foreign_key "team_members", "users"
 end
