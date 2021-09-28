@@ -18,6 +18,9 @@ RUN apt-get update -qq && \
   apt-get clean && \
   rm --recursive --force /var/lib/apt/lists/*
 
+# install packages about bootstrap
+RUN yarn add bootstrap@4.4.1 jquery@3.5.1 popper.js@1.16.1
+
 # set working directory
 RUN mkdir /app
 ENV APP_ROOT /app
