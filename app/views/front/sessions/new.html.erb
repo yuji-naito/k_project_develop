@@ -19,16 +19,22 @@
   <% end %>
 
   <%= form_with url: login_path do |f| %>
-    <%= f.label :email, class: "label" %>
-    <%= f.email_field :email, class: "form-control", placeholder: "メールアドレス" %>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control", placeholder: "メールアドレス" %>
+    </div>
 
-    <%= f.password_field :password, class: "form-control", placeholder: "パスワード" %>
+    <div class="form-group">
+      <%= f.password_field :password, class: "form-control", placeholder: "パスワード" %>
+    </div>
 
-    <%= f.label :remember, class: "label" do %>
-      <%= f.check_box :remember %>
-      Remember me
-    <% end %>
+    <div class="form-group">
+      <%= f.label :remember, class: "form-check-label" do %>
+        <%= f.check_box :remember %>
+        Remember me
+      <% end %>
+    </div>
 
-    <%= f.submit "ログインする", class: "btn btn-primary btn-signin bg-primary" %>
+    <%= f.submit "ログインする", class: "btn btn-primary" %>
   <% end %>
 </div>

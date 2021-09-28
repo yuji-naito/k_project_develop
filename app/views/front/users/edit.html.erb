@@ -16,18 +16,26 @@
   <% end %>
 
   <%= form_with model: @user, url: users_path do |f| %>
-    <%= f.label :name, class: "label" %>
-    <%= f.text_field :name, class: "form-control", placeholder: "氏名を入力" %>
+    <div class="form-group">
+      <%= f.label :name, class: "label" %>
+      <%= f.text_field :name, class: "form-control", placeholder: "氏名を入力" %>
+    </div>
 
-    <%= f.label :email, class: "label" %>
-    <%= f.email_field :email, class: "form-control", placeholder: "会社用メールアドレスを入力" %>
+    <div class="form-group">
+      <%= f.label :email, class: "label" %>
+      <%= f.email_field :email, class: "form-control", placeholder: "会社用メールアドレスを入力" %>
+    </div>
 
-    <%= f.label :phone_number, class: "label" %>
-    <%= f.text_field :phone_number, class: "form-control", placeholder: "社用携帯の番号を入力" %>
+    <div class="form-group">
+      <%= f.label :phone_number, class: "label" %>
+      <%= f.text_field :phone_number, class: "form-control", placeholder: "社用携帯の番号を入力" %>
+    </div>
 
-    <%= f.label :description, class: "label" %>
-    <%= f.text_area :description, class: "form-control", placeholder: "自己紹介を入力" %>
+    <div class="form-group">
+      <%= f.label :description, class: "label" %>
+      <%= f.text_area :description, class: "form-control", placeholder: "自己紹介を入力" %>
+    </div>
 
-    <%= f.submit "プロフィールを保存する", class: "btn btn-primary btn-profile bg-primary" %>
+    <%= f.submit "プロフィールを保存する", class: "btn btn-primar" %>
   <% end %>
 </div>
