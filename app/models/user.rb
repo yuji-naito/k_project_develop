@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :sent_letters, class_name: 'Letter', foreign_key: :sender_id
   has_many :received_letters, class_name: 'Letter', foreign_key: :receiver_id
   has_one :own_color
+  has_many :sent_colors, class_name: 'Color', foreign_key: :sender_id
+  has_many :received_colors, class_name: 'Color', foreign_key: :receiver_id
 
   attr_accessor :remember_token
   before_save :downcase_email

@@ -52,3 +52,19 @@ user1.create_own_color(
   color10: 0,
   color11: 5,  
 )
+
+# ColorFeedback
+user1.sent_colors.create(
+  receiver_id: user2.id,
+  color1_flag: true,
+  color2_flag: false,
+  color3_flag: false,
+  color4_flag: true,
+  color5_flag: false,
+  color6_flag: false,
+  color7_flag: false,
+  color8_flag: false,
+  color9_flag: false,
+  color10_flag: true,
+  color11_flag: false,
+)

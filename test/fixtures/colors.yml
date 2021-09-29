@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender: one
+  receiver: one
+  color1_flag: false
+  color2_flag: false
+  color3_flag: false
+  color4_flag: false
+  color5_flag: false
+  color6_flag: false
+  color7_flag: false
+  color8_flag: false
+  color9_flag: false
+  color10_flag: false
+  color11_flag: false
+
+two:
+  sender: two
+  receiver: two
+  color1_flag: false
+  color2_flag: false
+  color3_flag: false
+  color4_flag: false
+  color5_flag: false
+  color6_flag: false
+  color7_flag: false
+  color8_flag: false
+  color9_flag: false
+  color10_flag: false
+  color11_flag: false
