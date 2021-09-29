@@ -37,3 +37,18 @@ user2.sent_letters.create(
   receiver_id: user1.id,
   content: "サンプルLetterの2番目です。"
 )
+
+# 自己評価
+user1.create_own_color(
+  color1: 1,
+  color2: 0,
+  color3: 6,
+  color4: 4,
+  color5: 3,
+  color6: 2,
+  color7: 6,
+  color8: 3,
+  color9: 2,
+  color10: 0,
+  color11: 5,  
+)

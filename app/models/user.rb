@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :teams, through: :team_members
   has_many :sent_letters, class_name: 'Letter', foreign_key: :sender_id
   has_many :received_letters, class_name: 'Letter', foreign_key: :receiver_id
+  has_one :own_color
 
   attr_accessor :remember_token
   before_save :downcase_email

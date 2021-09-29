@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_28_232050) do
+ActiveRecord::Schema.define(version: 2021_09_29_062331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,24 @@ ActiveRecord::Schema.define(version: 2021_09_28_232050) do
     t.index ["sender_id"], name: "index_letters_on_sender_id"
   end
 
+  create_table "own_colors", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "color1", null: false
+    t.integer "color2", null: false
+    t.integer "color3", null: false
+    t.integer "color4", null: false
+    t.integer "color5", null: false
+    t.integer "color6", null: false
+    t.integer "color7", null: false
+    t.integer "color8", null: false
+    t.integer "color9", null: false
+    t.integer "color10", null: false
+    t.integer "color11", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_own_colors_on_user_id"
+  end
+
   create_table "team_members", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "team_id", null: false
@@ -86,6 +104,7 @@ ActiveRecord::Schema.define(version: 2021_09_28_232050) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "letters", "users", column: "receiver_id"
   add_foreign_key "letters", "users", column: "sender_id"
+  add_foreign_key "own_colors", "users"
   add_foreign_key "team_members", "teams"
   add_foreign_key "team_members", "users"
 end
