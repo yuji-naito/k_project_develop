@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_one_attached :avatar
   has_many :team_members
   has_many :teams, through: :team_members
+  has_many :sent_letters, class_name: 'Letter', foreign_key: :sender_id
+  has_many :received_letters, class_name: 'Letter', foreign_key: :receiver_id
 
   attr_accessor :remember_token
   before_save :downcase_email
